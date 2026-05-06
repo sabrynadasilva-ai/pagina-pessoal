@@ -6,103 +6,191 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    background-color: #f5f5f5;
 }
 
+/* Cabeçalho */
 header {
     background-color: #424e61;
     color: white;
     width: 100%;
-    padding: 20px;
+    padding: 15px 20px;
 }
 
 .cabecalho-itens {
-    max-width: 1980px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.cabecalho-imagem {
-    width: 10%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.cabecalho_imagem {
+    width: 80px;
+    height: auto;
 }
 
 .titulo_site {
-    padding: 50px;
+    font-size: 28px;
     text-align: center;
-    width: 50%;
-    font: 30px;
 }
 
 .sociais {
     display: flex;
-    justify-content: flex-end;
-    width: 25%;
-    padding-right: 30px;
+    gap: 15px;
 }
 
+.sociais_icone {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.sociais_icone:hover {
+    transform: scale(1.1);
+}
+
+/* Banner */
 .banner1 {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
+}
+
+.escola_imagem {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Seção Estudantes */
+.estudante {
+    background: linear-gradient(#faae43, #ffcc80);
+    padding: 40px 20px;
 }
 
 .estudante_titulo {
-    padding: 50px;
     text-align: center;
-}
-
-.estudante-nome {
-    text-align: center;
-}
-
-.estudante-imagem {
-    width: 120px;
-}
-
-.estudante-icone {
-    width: 38px;
-    padding: 4px 8px;
-}
-
-.estudante {
-    background-image: linear-gradient(#faae43, #faae43);
-    padding: 24px 0;
-}
-
-.estudante-div {
-    text-align: center;
-    padding: 24px 0;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 40px;
 }
 
 .estudantes_todos {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.escola {
-    background-image: linear-gradient(#40A2E3, #7FC2EF);
-    color: white;
+.estudante-div {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    width: 200px;
+}
+
+.estudante-div:hover {
+    transform: translateY(-5px);
+}
+
+.estudante-imagem {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #424e61;
+}
+
+.estudante-nome {
+    margin: 15px 0 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.estudante-icones {
     display: flex;
     justify-content: center;
-    padding: 24px 0;
-    text-align: center;
-    display: block;
+    gap: 15px;
 }
 
-.escola-titulo {
-    padding: 50px;
+.estudante-icone {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.estudante-icone:hover {
+    transform: scale(1.1);
+}
+
+/* Rodapé */
+.rodape {
+    background: linear-gradient(#40A2E3, #7FC2EF);
+    color: white;
     text-align: center;
+    padding: 30px 20px;
 }
 
 .logo_rodape {
     height: 80px;
-    padding: 12px 0;
+    margin-bottom: 15px;
 }
 
-.link {
-    color: #ffffff;
+.rodape-titulo {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.rodape-whats {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
     text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: #25D366;
+    border-radius: 25px;
+}
+
+.rodape-whats:hover {
+    background-color: #128C7E;
+}
+
+.rodape-copyright {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cabecalho-itens {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .titulo_site {
+        font-size: 22px;
+    }
+    
+    .estudante_titulo {
+        font-size: 24px;
+    }
+    
+    .estudantes_todos {
+        gap: 20px;
+    }
+    
+    .estudante-div {
+        width: 160px;
+    }
 }
