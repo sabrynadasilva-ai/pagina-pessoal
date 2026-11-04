@@ -346,3 +346,12 @@ body {
         font-size: 24px;
     }
 }
+
+.banner {
+    background-image:
+        linear-gradient(rgba(0, 15, 9, 0.35), rgba(0, 15, 9, 0.35)),
+        url("banner-sonserina.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 380px;
+}
