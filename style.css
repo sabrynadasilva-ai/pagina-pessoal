@@ -1,100 +1,348 @@
-*{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-body{
-font-family: "Poppins", sans-serif;
-}
-header{
-background-color: #424e61;
-color: white;
-width: 100%;
-padding: 20px;
-}
-.cabecalho-itens{
-max-width: 1980px;
-margin: 0 auto;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.cabecalho-imagem{
-width: 10%;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-}
-.titulo_site{
-padding: 50px;
-text-align: center;
-width: 50%;
-font-size: 30px;
-}
-.sociais{
-display: flex;
-justify-content: flex-end;
-width: 25%;
-padding-right: 30px;
-}
-.banner1{
-display: flex;
-justify-content: center;
-}
-.estudante_titulo{
-padding: 50px;
-text-align: center;
-
-}
-.estudante-nome{
-text-align: center;
-}
-.estudante-imagem{
-width: 120px;
-}
-.estudante-icone{
-width: 38px;
-padding: 4px 8px;
-}
-.estudante{
-background-color: #faae43;
-padding: 24px 0;
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.estudante-div{
-text-align: center;
-padding: 24px 0;
-}
-.estudantes_todos{
-display: flex;
-justify-content: space-around;
-}
-.escola{
-background-image: linear-gradient(#40A2E3,#7FC2EF);
-color: white;
-display: flex;
-justify-content:center;
-padding: 24px 0;
-text-align:center;
-display:block;
-}
-.escola-titulo{
-padding: 50px;
-text-align: center;
-}
-.logo_rodape{
-height: 80px;
-padding: 12px 0;
-
+html {
+    scroll-behavior: smooth;
 }
 
-.link{
-color: #ffffff;
-text-decoration: none;
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #07140f;
+    color: #e5e5df;
 }
 
-.banner-imagem {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Cabeçalho */
+.cabecalho {
+    background-color: #06110c;
+    border-bottom: 2px solid #a9b4ad;
+    padding: 25px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.simbolo {
+    font-size: 55px;
+}
+
+.marca-subtitulo {
+    color: #aebbb2;
+    letter-spacing: 5px;
+    font-size: 11px;
+}
+
+.marca h1 {
+    color: #d5d8d5;
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: #d5d8d5;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #5ca783;
+}
+
+/* Banner */
+.banner {
+    min-height: 340px;
+    background:
+        linear-gradient(90deg, #07140f 0%, #123d2c 55%, #07140f 100%);
+    border-bottom: 2px solid #a9b4ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "🐍";
+    position: absolute;
+    right: 8%;
+    top: 35px;
+    font-size: 130px;
+    opacity: 0.13;
+}
+
+.banner-texto {
+    position: relative;
+    z-index: 1;
+}
+
+.banner-legenda {
+    color: #b7c5bb;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.banner h2 {
+    font-size: 46px;
+    font-weight: normal;
+    color: #e5e5df;
+    margin-bottom: 20px;
+}
+
+.banner-texto > p:last-child {
+    font-size: 20px;
+    font-style: italic;
+    color: #c3ccc5;
+}
+
+.banner-decoracao {
+    color: #b5c4ba;
+    font-size: 30px;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* Sobre mim */
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 65px 10%;
+    background-color: #0a1c14;
+    border-bottom: 2px solid #89978e;
+}
+
+.sobre-texto {
+    max-width: 650px;
+}
+
+.sobre h2,
+.minha-casa h2,
+.interesses h2 {
+    font-size: 34px;
+    font-weight: normal;
+    margin-bottom: 25px;
+    color: #d7ded8;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+    color: #d0d6d1;
+}
+
+.sobre-foto {
+    width: 210px;
+    height: 250px;
+    border: 2px solid #aebbb2;
+    outline: 1px solid #536e5c;
+    outline-offset: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: linear-gradient(145deg, #193c2b, #07140f);
+}
+
+.sobre-foto span {
+    font-size: 65px;
+    color: #c5d0c7;
+}
+
+.sobre-foto p {
+    color: #b5c4ba;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Minha casa */
+.minha-casa {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 65px 10%;
+    background-color: #06110c;
+    border-bottom: 2px solid #89978e;
+}
+
+.casa-texto {
+    max-width: 550px;
+    text-align: center;
+}
+
+.minha-casa h3 {
+    color: #3d966b;
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.minha-casa p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #d0d6d1;
+}
+
+.minha-casa .lema {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #aebbb2;
+}
+
+.brasao {
+    width: 230px;
+    height: 250px;
+    border: 3px double #aebbb2;
+    border-radius: 48% 48% 15% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #17452f, #07140f);
+}
+
+.brasao span {
+    font-size: 90px;
+}
+
+.brasao p {
+    letter-spacing: 4px;
+    font-size: 15px;
+    color: #d1d8d2;
+}
+
+/* Interesses */
+.interesses {
+    text-align: center;
+    padding: 55px 20px;
+    background-color: #0a1c14;
+    border-bottom: 2px solid #89978e;
+}
+
+.interesses-lista {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.interesse {
+    min-width: 100px;
+}
+
+.interesse span {
+    font-size: 38px;
+    color: #aebbb2;
+}
+
+.interesse p {
+    margin-top: 12px;
+    font-size: 18px;
+    color: #d5d8d5;
+}
+
+.frase-final {
+    font-size: 30px;
+    font-style: italic;
+    color: #8fbd9f;
+    margin-top: 35px;
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    padding: 35px 20px;
+    background-color: #06110c;
+    color: #c5cec7;
+}
+
+.rodape span {
+    font-size: 35px;
+}
+
+.rodape p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.rodape small {
+    color: #8e9d92;
+}
+
+/* Adaptação para celulares */
+@media (max-width: 700px) {
+
+    .cabecalho {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .marca {
+        justify-content: center;
+    }
+
+    .marca h1 {
+        font-size: 27px;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .banner h2 {
+        font-size: 32px;
+    }
+
+    .banner-legenda {
+        letter-spacing: 2px;
+    }
+
+    .sobre,
+    .minha-casa {
+        flex-direction: column;
+        padding: 45px 25px;
+        gap: 35px;
+    }
+
+    .sobre-foto {
+        width: 190px;
+        height: 220px;
+    }
+
+    .minha-casa h3 {
+        font-size: 42px;
+    }
+
+    .interesses-lista {
+        gap: 35px;
+    }
+
+    .frase-final {
+        font-size: 24px;
+    }
 }
